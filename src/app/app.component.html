@@ -18,7 +18,8 @@
       <tr *ngFor="let werkzeugData of data">
         <td>{{werkzeugData.tool_id}}</td>
         <td>{{werkzeugData.count}}</td>
-        <td>{{werkzeugData.time | decimalToTime}}</td>
+        <td *ngIf="werkzeugData.time">{{werkzeugData.time | decimalToTime }}</td>
+        <!-- <td *ngIf="werkzeugData.time">{{werkzeugData.time | decimalToTime | date:'mm:ss'}}</td> -->
         <td>{{werkzeugData.cposmin}} : {{werkzeugData.cposmax}}</td>
       </tr>
     </tbody>
