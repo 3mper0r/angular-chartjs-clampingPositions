@@ -1,0 +1,26 @@
+
+<div *ngFor="let werkzeug of data">
+  <!-- {{werkzeug.time}} -->
+</div>
+
+<div class="main-container">
+  <!-- <ul>
+    <li *ngFor="let data of data">{{data.tool_id}}</li>
+  </ul> -->
+  <table>
+    <thead>
+      <th>Werkzeugname</th>
+      <th>Anzahl der Einsatze</th>
+      <th>Einsatzzeit</th>
+      <th>Spannpositionen der Werkzeuge</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let werkzeugData of data">
+        <td>{{werkzeugData.tool_id}}</td>
+        <td>{{werkzeugData.count}}</td>
+        <td>{{werkzeugData.time | decimalToTime}}</td>
+        <td>{{werkzeugData.cposmin}} : {{werkzeugData.cposmax}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
