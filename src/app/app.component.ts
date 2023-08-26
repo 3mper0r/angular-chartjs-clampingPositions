@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import werkZeugData from '../data/data.json'
 import { WerkzeugData } from './models/werkzeug-data';
-import decimalToTime from '../app/lib/numberToTimeConverter'
+import { Chart } from 'chart.js';
+import { ChartDataComponent } from './chart-data/chart-data.component';
 
 @Component({
   selector: 'app-root',
@@ -12,24 +13,11 @@ export class AppComponent {
   title = 'first-angular-app';
   //newMemberName: string = ''
   //names: string[] = []
-  errorMessage: string = ''
+  //errorMessage: string = ''
+  
 
-data: WerkzeugData[] = werkZeugData;
+  
+  myChart: any
+  data: WerkzeugData[] = werkZeugData;
 
-//constructor(){}
-//let converter = werkZeugData.find(item => item === item.time)
-//decimalToTime
-  // onInput(member: string) {
-  //   this.newMemberName = member 
-  // }
-
-  // addMember() {
-  //   if (!this.newMemberName || this.newMemberName.length < 2) {
-  //     this.errorMessage = 'You must write a name'
-  //     return
-  //   }
-  //   this.errorMessage = ''
-  //   this.names.push(this.newMemberName)
-  //   this.newMemberName = ''
-  // }
 }

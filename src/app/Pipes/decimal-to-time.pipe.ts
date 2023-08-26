@@ -7,7 +7,7 @@ export class DecimalToTimePipe implements PipeTransform {
 
   transform(decimalNumber: number): string {
 
-    const totalSeconds = Math.floor(decimalNumber)
+    const totalSeconds = Math.ceil(decimalNumber)
     const hours = Math.floor(totalSeconds / 3600)
     const minutes = Math.floor((totalSeconds % 3600) / 60)
     const seconds = totalSeconds % 60

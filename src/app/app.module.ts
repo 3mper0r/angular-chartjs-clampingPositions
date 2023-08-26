@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { DecimalToTimePipe } from './Pipes/decimal-to-time.pipe';
+import { ChartDataComponent } from './chart-data/chart-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DecimalToTimePipe
+    DecimalToTimePipe,
+    ChartDataComponent
   ],
   imports: [
     BrowserModule,

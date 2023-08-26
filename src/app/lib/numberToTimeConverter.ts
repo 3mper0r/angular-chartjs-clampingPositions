@@ -1,5 +1,5 @@
 function decimalToTime(decimalNumber: number) {
-    const totalSeconds = Math.floor(decimalNumber * 3600); // Convert to total seconds
+    const totalSeconds = Math.floor(decimalNumber);
     const hours = Math.floor(totalSeconds / 3600);
     const minutes = Math.floor((totalSeconds % 3600) / 60);
     const seconds = totalSeconds % 60;
