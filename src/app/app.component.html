@@ -1,6 +1,3 @@
-<!-- <div>
-  <canvas id="myChart"></canvas>
-</div> -->
 <div class="main-container">
   <table>
     <thead>
@@ -11,14 +8,17 @@
     </thead>
     <tbody>
       <tr *ngFor="let werkzeugData of data; let i=index">
-        <td>{{werkzeugData.tool_id}} > {{i}}</td>
+        <td>{{werkzeugData.tool_id}}</td>
         <td>{{werkzeugData.count}}</td>
         <td *ngIf="werkzeugData.time">{{werkzeugData.time | decimalToTime }}</td>
-        <td style="display: inline;"><canvas style="width: 800px; height: 50px; display: inline;" id="myChart"></canvas></td>
+        <td style="display: inline;">
+          <!-- error to fix -->
+          <canvas style="width: 800px; height: 32px; display: inline;" id="{{ 'myChart' + i }}">{{createBar(minValue, maxValue)}}</canvas>
+        </td>
       </tr>
     </tbody>
   </table>
+  
 </div>
 
 <!-- <td class="spannpositionen-fields">{{werkzeugData.cposmin}} : {{werkzeugData.cposmax}}</td> WITHOUT CHART--> 
-        

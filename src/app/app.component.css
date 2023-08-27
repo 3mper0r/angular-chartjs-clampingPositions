@@ -13,12 +13,5 @@
 } 
 
 th {
-    text-align: start;
-    
-}
-
-.bar-wrapper {
-    display: inline;
-    
-    align-self: center;
-}
+    text-align: start;   
+} 
