@@ -1,19 +1,24 @@
-.error-message {
-    color: red
-}
 
 .main-container {
-    
     background-color: rgb(202, 228, 219);
-    width: 1280px;
+   
 }
 
-.spannpositionen-fields {
-    background-color: #f1f4f6;
+.werkzeugname, .anzahl, .einsatzzeit{
+    width: 10vw;
 }
+
+.spannpositionen-title {
+    width: 60vw;   
+} 
 
 th {
-    width: 20%;
     text-align: start;
+    
 }
 
+.bar-wrapper {
+    display: inline;
+    
+    align-self: center;
+}
